@@ -17,6 +17,13 @@ The dataset contains many features, but the ones used in the model are:
 **Survived:** is the label of the target variable, which indicates whether the passenger survived.
 
 ## Data Preprocessing
+Before training the model, the data was preprocessed to ensure that it was suitable for machine learning.
+
+### Handling Missing Values: 
+Some passengers had missing values in the Age column. These missing values were replaced with the median age of the passengers.
+
+### Converting Categorical Data: 
+The Sex column contained categorical values such as "male" and "female". Since Logistic Regression requires numerical input, these values were converted into numerical values, where male was represented by 0 and female by 1.
 
 ## Model Evaluation
 
