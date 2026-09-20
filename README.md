@@ -38,6 +38,5 @@ The following evaluation metrics were used:
 2. Pandas
 3. Scikit-Learn
 
-
-
-
+# Dataset
+https://www.kaggle.com/datasets/yasserh/titanic-dataset  
