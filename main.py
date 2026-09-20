@@ -1,0 +1,40 @@
+# Load Data
+data = pd.read_csv('Titanic.csv')
+
+# Feature Selection
+x = data[["Pclass", "Sex", "Age", "SibSp", "Parch", "Fare"]].copy()
+y = data['Survived']
+
+# Hanlde Missing Values 
+x["Age"] = x["Age"].fillna(x["Age"].median())
+
+# Encoding Sex in to Numerical Values
+x["Sex"] = x["Sex"].map({
+    "male": 0,
+    "female": 1
+})
+
+# Train Test Split
+x_train, x_test, y_train, y_test = train_test_split(
+    x,
+    y,
+    test_size=0.2,
+    random_state=42,
+    stratify=y
+)
+
+# Model Creation and Training
+model = LogisticRegression()
+model.fit(x_train , y_train)
+
+# Model Prediction
+y_pred = model.predict(x_test)
+print(y_pred)
+
+# Model Evaluation
+accuracy = accuracy_score(y_test, y_pred)
+report = classification_report(y_test, y_pred)
+matrix = confusion_matrix(y_test, y_pred)
+print("Accuracy:", accuracy)
+print("Classification Report:" , report)
+print("Confusion Matrix:", matrix)
