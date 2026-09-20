@@ -4,7 +4,7 @@ This project implements a logistic regression machine learning model to predict 
 
 ## Features
 
-The dataset contains many features, but the ones used in the model are:  
+The dataset contains many features, but the ones used in the model are  
 **Pclass:** Passenger class (1st, 2nd, or 3rd)  
 **Sex:** Passenger's gender (male or female)  
 **Age:** Passenger's age  
@@ -27,7 +27,7 @@ The Sex column contained categorical values such as "male" and "female". Since L
 
 ## Model Evaluation
 
-Following Evaluation Metrics were used:
+The following evaluation metrics were used:
 1. Accuracy
 2. Classification Report
 3. Confusion Matrix
